@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXFLibrary", "DXFLibrary\DXFLibrary.csproj", "{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXFLib", "DXFLib\DXFLib.csproj", "{93993420-0CD1-4893-BF76-AF20DDEBC8AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93993420-0CD1-4893-BF76-AF20DDEBC8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93993420-0CD1-4893-BF76-AF20DDEBC8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93993420-0CD1-4893-BF76-AF20DDEBC8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93993420-0CD1-4893-BF76-AF20DDEBC8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D329F67F-4538-481A-A2FF-DAA5D3CDEB8C}
+	EndGlobalSection
+EndGlobal

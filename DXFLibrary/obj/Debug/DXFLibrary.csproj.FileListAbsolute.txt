@@ -1,0 +1,12 @@
+C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLibrary\bin\Debug\DXFLib.dll
+C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLibrary\bin\Debug\DXFLib.pdb
+C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLibrary\obj\Debug\DXFLibrary.csprojAssemblyReference.cache
+C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLibrary\obj\Debug\DXFLibrary.csproj.CoreCompileInputs.cache
+C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLibrary\obj\Debug\DXFLib.dll
+C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLibrary\obj\Debug\DXFLib.pdb
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLibrary\bin\Debug\DXFLib.dll
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLibrary\bin\Debug\DXFLib.pdb
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLibrary\obj\Debug\DXFLibrary.csprojAssemblyReference.cache
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLibrary\obj\Debug\DXFLibrary.csproj.CoreCompileInputs.cache
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLibrary\obj\Debug\DXFLib.dll
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLibrary\obj\Debug\DXFLib.pdb

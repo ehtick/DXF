@@ -1,0 +1,9 @@
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLib\bin\Debug\netcoreapp3.1\DXFLib.deps.json
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLib\bin\Debug\netcoreapp3.1\DXFLib.dll
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLib\bin\Debug\netcoreapp3.1\DXFLib.pdb
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLib\obj\Debug\netcoreapp3.1\DXFLib.csprojAssemblyReference.cache
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLib\obj\Debug\netcoreapp3.1\DXFLib.AssemblyInfoInputs.cache
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLib\obj\Debug\netcoreapp3.1\DXFLib.AssemblyInfo.cs
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLib\obj\Debug\netcoreapp3.1\DXFLib.csproj.CoreCompileInputs.cache
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLib\obj\Debug\netcoreapp3.1\DXFLib.dll
+C:\Users\jemgr\OneDrive\Source\Projects\DXF\DXFLib\obj\Debug\netcoreapp3.1\DXFLib.pdb
