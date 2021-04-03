@@ -1,5 +1,0 @@
-C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLib\bin\Debug\DXFLib.dll
-C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLib\bin\Debug\DXFLib.pdb
-C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLib\obj\Debug\DXFLib.csproj.CoreCompileInputs.cache
-C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLib\obj\Debug\DXFLib.dll
-C:\Users\jemgr\OneDrive\Source\Projects\DXFLib\DXFLib\obj\Debug\DXFLib.pdb

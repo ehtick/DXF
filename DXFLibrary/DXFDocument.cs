@@ -6,11 +6,11 @@ using System.IO;
 using System.Threading;
 using System.Globalization;
 
-namespace DXFLib
+namespace DXFLibrary
 {
     public class DXFDocument
     {
-        #region Variables
+        #region Fields
 
         private DXFHeader header = new DXFHeader();
         private List<DXFClass> classes = new List<DXFClass>();
@@ -45,7 +45,13 @@ namespace DXFLib
 
         public void Load(string filename)
         {
-            FileStream stream = new FileStream(filename, FileMode.Open);
+            Load("", filename);
+        }
+        
+        public void Load(string path, string filename)
+        {
+            string filenamePath = Path.Combine(path, filename);
+            FileStream stream = new FileStream(filenamePath + ".dxf", FileMode.Open);
             Load(stream);
             stream.Close();
         }

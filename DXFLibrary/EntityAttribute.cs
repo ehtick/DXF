@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DXFLib
+namespace DXFLibrary
 {
     [AttributeUsage(AttributeTargets.Class)]
     class EntityAttribute : Attribute

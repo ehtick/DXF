@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DXFLib
+namespace DXFLibrary
 {
     [Entity("VERTEX")]
     public class DXFVertex : DXFEntity

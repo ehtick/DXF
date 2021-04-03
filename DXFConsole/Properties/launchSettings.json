@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DXFConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "\"SonarMote_lasercut plans_1.75mm acrylic.dxf\""
+    }
+  }
+}

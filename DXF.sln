@@ -1,11 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.31105.61
+VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXFLibrary", "DXFLibrary\DXFLibrary.csproj", "{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DXFConsole", "DXFConsole\DXFConsole.csproj", "{8FA270FB-7CFB-4904-8ADA-89A4C86C847B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DXFLib", "DXFLib\DXFLib.csproj", "{93993420-0CD1-4893-BF76-AF20DDEBC8AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DXFLib", "DXFLibrary\DXFLibrary.csproj", "{4D1736A2-AC95-428E-A54E-4B9D04ACACC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{97047BE1-9351-47AE-897A-7924E2619B83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logger", "Logger", "{83639403-2A14-4022-8DD8-BDABB74AEA83}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\Logger\LoggerLibrary.deps.json = ThirdParty\Logger\LoggerLibrary.deps.json
+		ThirdParty\Logger\LoggerLibrary.dll = ThirdParty\Logger\LoggerLibrary.dll
+		ThirdParty\Logger\LoggerLibrary.pdb = ThirdParty\Logger\LoggerLibrary.pdb
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,19 +22,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{476FA4C4-FA1D-4A2A-985B-8CBF50F82251}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93993420-0CD1-4893-BF76-AF20DDEBC8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93993420-0CD1-4893-BF76-AF20DDEBC8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93993420-0CD1-4893-BF76-AF20DDEBC8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93993420-0CD1-4893-BF76-AF20DDEBC8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FA270FB-7CFB-4904-8ADA-89A4C86C847B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA270FB-7CFB-4904-8ADA-89A4C86C847B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA270FB-7CFB-4904-8ADA-89A4C86C847B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA270FB-7CFB-4904-8ADA-89A4C86C847B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1736A2-AC95-428E-A54E-4B9D04ACACC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1736A2-AC95-428E-A54E-4B9D04ACACC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1736A2-AC95-428E-A54E-4B9D04ACACC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1736A2-AC95-428E-A54E-4B9D04ACACC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{83639403-2A14-4022-8DD8-BDABB74AEA83} = {97047BE1-9351-47AE-897A-7924E2619B83}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D329F67F-4538-481A-A2FF-DAA5D3CDEB8C}
+		SolutionGuid = {A9BF0F8F-1807-4FA0-9550-6F2B89262FA6}
 	EndGlobalSection
 EndGlobal
