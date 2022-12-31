@@ -1,8 +1,0 @@
-2021-03-14 09:40:52.085 +00:00 [Debug] DXFConsole.App: In Run()
-2021-03-14 09:40:52.122 +00:00 [Information] DXFConsole.App: Use HPGL2Name=dxf.xml HPGL2Path=C:\SOURCE\GIT\cs.net\DXF\DXFConsole\bin\Debug\netcoreapp3.1
-2021-03-14 09:40:57.144 +00:00 [Information] DXFConsole.App: Use filename=SonarMote_lasercut plans_1.75mm acrylic
-2021-03-14 09:40:57.148 +00:00 [Information] DXFConsole.App: Use filePath=C:\SOURCE\GIT\cs.net\DXF\DXFConsole\bin\Debug\netcoreapp3.1
-2021-03-14 09:43:22.966 +00:00 [Debug] DXFConsole.App: In Run()
-2021-03-14 09:43:23.011 +00:00 [Information] DXFConsole.App: Use HPGL2Name=dxf.xml HPGL2Path=C:\SOURCE\GIT\cs.net\DXF\DXFConsole\bin\Debug\netcoreapp3.1
-2021-03-14 09:43:24.508 +00:00 [Information] DXFConsole.App: Use filename=SonarMote_lasercut plans_1.75mm acrylic
-2021-03-14 09:43:24.511 +00:00 [Information] DXFConsole.App: Use filePath=C:\SOURCE\GIT\cs.net\DXF\DXFConsole\bin\Debug\netcoreapp3.1
