@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DXFLibrary/bin/Debug/netcoreapp3.1
+/DXFTest/bin/Debug/netcoreapp3.1
+/DXFTest/obj/Debug/netcoreapp3.1
+/DXFTest/obj
