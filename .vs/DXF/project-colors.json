@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8fa270fb-7cfb-4904-8ada-89a4c86c847b": {
+      "ProjectGuid": "8fa270fb-7cfb-4904-8ada-89a4c86c847b",
+      "DisplayName": "DXFConsole",
+      "ColorIndex": 0
+    },
+    "4d1736a2-ac95-428e-a54e-4b9d04acacc3": {
+      "ProjectGuid": "4d1736a2-ac95-428e-a54e-4b9d04acacc3",
+      "DisplayName": "DXFLibrary",
+      "ColorIndex": 1
+    },
+    "9d6f9869-2298-42e4-8d9d-4c132fe803d0": {
+      "ProjectGuid": "9d6f9869-2298-42e4-8d9d-4c132fe803d0",
+      "DisplayName": "DXFTest",
+      "ColorIndex": 2
+    },
+    "2a998755-c091-4bf5-9367-54e376c36532": {
+      "ProjectGuid": "2a998755-c091-4bf5-9367-54e376c36532",
+      "DisplayName": "DXFTerminal",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
