@@ -1,8 +1,0 @@
-is_global = true
-build_property.RootNamespace = DXF
-build_property.ProjectDir = C:\SOURCE\GIT\cs.net\DXF\DXFConsole\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.CsWinRTUseWindowsUIXamlProjections = false
-build_property.EffectiveAnalysisLevelStyle = 
-build_property.EnableCodeStyleSeverity = 
