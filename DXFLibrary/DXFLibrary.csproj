@@ -1,15 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyName>DXFLibrary</AssemblyName>
     <RootNamespace>DXFLibrary</RootNamespace>
   </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="TracerLibrary">
       <HintPath>..\ThirdParty\Tracer\netcoreapp3.1\TracerLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
-
 </Project>
