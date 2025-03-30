@@ -12,7 +12,7 @@ namespace DXFConsole
     {
         #region Fields
 
-        static DXFDocument _dxf;
+        static Document _dxf;
         public static bool isclosing = false;
         static private HandlerRoutine ctrlCHandler;
 
@@ -64,47 +64,46 @@ namespace DXFConsole
             ctrlCHandler = new HandlerRoutine(ConsoleCtrlCheck);
             SetConsoleCtrlHandler(ctrlCHandler, true);
 
-            Parameter<string> appPath = new Parameter<string>("");
-            Parameter<string> appName = new Parameter<string>("dxf.xml");
+            Parameter<string> appPath = new Parameter<string>("appPath","");
+            Parameter<string> appName = new Parameter<string>("appName","dxf.cfg");
 
             // Required for the plot
 
-            Parameter<string> filename = new Parameter<string>("");
-            Parameter<string> filePath = new Parameter<string>("");
-            Parameter<string> outName = new Parameter<string>("");
+            Parameter<string> filename = new Parameter<string>("filename","");
+            Parameter<string> filePath = new Parameter<string>("filePath","");
+            Parameter<string> outName = new Parameter<string>("outName","");
 
             filePath.Value = Environment.CurrentDirectory;
-            filePath.Source = Parameter<string>.SourceType.App;
+            filePath.Source = IParameter.SourceType.App;
 
             appPath.Value = System.Reflection.Assembly.GetExecutingAssembly().Location;
             int pos = appPath.Value.ToString().LastIndexOf(Path.DirectorySeparatorChar);
             if (pos > 0)
             {
                 appPath.Value = appPath.Value.ToString().Substring(0, pos);
-                appPath.Source = Parameter<string>.SourceType.App;
+                appPath.Source = IParameter.SourceType.App;
             }
 
-            Parameter<string> logPath = new Parameter<string>("");
-            Parameter<string> logName = new Parameter<string>("DXFConsole");
+            Parameter<string> logPath = new Parameter<string>("logPath","");
+            Parameter<string> logName = new Parameter<string>("logNamr","DXFConsole");
             logPath.Value = System.Reflection.Assembly.GetExecutingAssembly().Location;
             pos = logPath.Value.ToString().LastIndexOf(Path.DirectorySeparatorChar);
             if (pos > 0)
             {
                 logPath.Value = logPath.Value.ToString().Substring(0, pos);
-                logPath.Source = Parameter<string>.SourceType.App;
+                logPath.Source = IParameter.SourceType.App;
             }
 
 
-            Parameter<SourceLevels> traceLevels = new Parameter<SourceLevels>();
-            traceLevels.Value = TraceInternal.TraceLookup("CRITICAL");
-            traceLevels.Source = Parameter<SourceLevels>.SourceType.App;
+            Parameter<SourceLevels> traceLevels = new Parameter<SourceLevels>("traceLevels",TraceInternal.TraceLookup("CRITICAL"));
+            traceLevels.Source = IParameter.SourceType.App;
 
             // Configure tracer options
 
             string logFilenamePath = logPath.Value.ToString() + Path.DirectorySeparatorChar + logName.Value.ToString() + ".log";
             FileStreamWithRolling dailyRolling = new FileStreamWithRolling(logFilenamePath, new TimeSpan(1, 0, 0, 0), FileMode.Append);
             TextWriterTraceListenerWithTime listener = new TextWriterTraceListenerWithTime(dailyRolling);
-            Trace.AutoFlush = true;
+            System.Diagnostics.Trace.AutoFlush = true;
             TraceFilter fileTraceFilter = new System.Diagnostics.EventTypeFilter(SourceLevels.Verbose);
             listener.Filter = fileTraceFilter;
 
@@ -113,15 +112,15 @@ namespace DXFConsole
             ConsoleTraceListener console = new ConsoleTraceListener();
             TraceFilter consoleTraceFilter = new System.Diagnostics.EventTypeFilter(SourceLevels.Information);
             console.Filter = consoleTraceFilter;
-            Trace.Listeners.Clear();
-            Trace.Listeners.Add(listener);
-            Trace.Listeners.Add(console);
+            System.Diagnostics.Trace.Listeners.Clear();
+            System.Diagnostics.Trace.Listeners.Add(listener);
+            System.Diagnostics.Trace.Listeners.Add(console);
 
-            // Check if the config file has been paased in and overwrite the registry
+            // Check if the config file has been passed in and overwrite the registry
 
             // Read in configuration
 
-            _dxf = new DXFDocument();
+            _dxf = new Document();
 
             // Read in the plot specific parameters
 
@@ -143,14 +142,14 @@ namespace DXFConsole
                 if (pos > 0)
                 {
                     filePath.Value = filenamePath.Substring(0, pos);
-                    filePath.Source = Parameter<string>.SourceType.Command;
+                    filePath.Source = IParameter.SourceType.Command;
                     filename.Value = filenamePath.Substring(pos + 1, filenamePath.Length - pos - 1);
-                    filename.Source = Parameter<string>.SourceType.Command;
+                    filename.Source = IParameter.SourceType.Command;
                 }
                 else
                 {
                     filename.Value = filenamePath;
-                    filename.Source = Parameter<string>.SourceType.Command;
+                    filename.Source = IParameter.SourceType.Command;
                 }
                 TraceInternal.TraceInformation("Use filename=" + filename.Value);
                 TraceInternal.TraceInformation("Use filePath=" + filePath.Value);
@@ -174,7 +173,7 @@ namespace DXFConsole
                                     traceName = traceName.TrimStart('"');
                                     traceName = traceName.TrimEnd('"');
                                     traceLevels.Value = TraceInternal.TraceLookup(traceName);
-                                    traceLevels.Source = Parameter<SourceLevels>.SourceType.Command;
+                                    traceLevels.Source = IParameter.SourceType.Command;
                                     TraceInternal.TraceVerbose("Use command value Name=" + traceLevels);
                                     break;
                                 }
@@ -184,7 +183,7 @@ namespace DXFConsole
                                     appName.Value = args[item + 1];
                                     appName.Value = appName.Value.ToString().TrimStart('"');
                                     appName.Value = appName.Value.ToString().TrimEnd('"');
-                                    appName.Source = Parameter<string>.SourceType.Command;
+                                    appName.Source = IParameter.SourceType.Command;
                                     TraceInternal.TraceVerbose("Use command value Name=" + appName);
                                     break;
                                 }
@@ -194,7 +193,7 @@ namespace DXFConsole
                                     appPath.Value = args[item + 1];
                                     appPath.Value = appPath.Value.ToString().TrimStart('"');
                                     appPath.Value = appPath.Value.ToString().TrimEnd('"');
-                                    appPath.Source = Parameter<string>.SourceType.Command;
+                                    appPath.Source = IParameter.SourceType.Command;
                                     TraceInternal.TraceVerbose("Use command value Path=" + appPath);
                                     break;
                                 }
@@ -204,7 +203,7 @@ namespace DXFConsole
                                     logName.Value = args[item + 1];
                                     logName.Value = logName.Value.ToString().TrimStart('"');
                                     logName.Value = logName.Value.ToString().TrimEnd('"');
-                                    logName.Source = Parameter<string>.SourceType.Command;
+                                    logName.Source = IParameter.SourceType.Command;
                                     TraceInternal.TraceVerbose("Use command value logName=" + logName);
                                     break;
                                 }
@@ -214,7 +213,7 @@ namespace DXFConsole
                                     logPath.Value = args[item + 1];
                                     logPath.Value = logPath.Value.ToString().TrimStart('"');
                                     logPath.Value = logPath.Value.ToString().TrimEnd('"');
-                                    logPath.Source = Parameter<string>.SourceType.Command;
+                                    logPath.Source = IParameter.SourceType.Command;
                                     TraceInternal.TraceVerbose("Use command value logPath=" + logPath);
                                     break;
                                 }
@@ -224,7 +223,7 @@ namespace DXFConsole
                                     filename.Value = args[item + 1];
                                     filename.Value = filename.Value.ToString().TrimStart('"');
                                     filename.Value = filename.Value.ToString().TrimEnd('"');
-                                    filename.Source = Parameter<string>.SourceType.Command;
+                                    filename.Source = IParameter.SourceType.Command;
                                     pos = filename.Value.ToString().LastIndexOf('.');
                                     if (pos > 0)
                                     {
@@ -240,7 +239,7 @@ namespace DXFConsole
                                     outName.Value = args[item + 1];
                                     outName.Value = outName.Value.ToString().TrimStart('"');
                                     outName.Value = outName.Value.ToString().TrimEnd('"');
-                                    outName.Source = Parameter<string>.SourceType.Command;
+                                    outName.Source = IParameter.SourceType.Command;
                                     TraceInternal.TraceVerbose("Use command value Output=" + outName);
                                     break;
                                 }
@@ -250,7 +249,7 @@ namespace DXFConsole
                                     filePath.Value = args[item + 1];
                                     filePath.Value = filePath.Value.ToString().TrimStart('"');
                                     filePath.Value = filePath.Value.ToString().TrimEnd('"');
-                                    filePath.Source = Parameter<string>.SourceType.Command;
+                                    filePath.Source = IParameter.SourceType.Command;
                                     TraceInternal.TraceVerbose("Use command value Filename=" + filePath);
                                     break;
                                 }
@@ -262,12 +261,12 @@ namespace DXFConsole
             // Adjust the log location if it has been overridden in the registry
 
 
-            if (logPath.Source == Parameter<string>.SourceType.Command)
+            if (logPath.Source == IParameter.SourceType.Command)
             {
                 logFilenamePath = logPath.Value.ToString() + Path.DirectorySeparatorChar + logName.Value.ToString() + ".log";
             }
 
-            if (logName.Source == Parameter<string>.SourceType.Command)
+            if (logName.Source == IParameter.SourceType.Command)
             {
                 logFilenamePath = logPath.Value.ToString() + Path.DirectorySeparatorChar + logName.Value.ToString() + ".log";
             }
@@ -276,17 +275,17 @@ namespace DXFConsole
             // Redirect the output
 
             listener.Flush();
-            Trace.Listeners.Remove(listener);
+            System.Diagnostics.Trace.Listeners.Remove(listener);
             listener.Close();
             listener.Dispose();
 
             dailyRolling = new FileStreamWithRolling(logFilenamePath, new TimeSpan(1, 0, 0, 0), FileMode.Append);
             listener = new TextWriterTraceListenerWithTime(dailyRolling);
-            Trace.AutoFlush = true;
+            System.Diagnostics.Trace.AutoFlush = true;
             SourceLevels sourceLevels = TraceInternal.TraceLookup(traceLevels.Value.ToString());
             fileTraceFilter = new System.Diagnostics.EventTypeFilter(sourceLevels);
             listener.Filter = fileTraceFilter;
-            Trace.Listeners.Add(listener);
+            System.Diagnostics.Trace.Listeners.Add(listener);
 
             TraceInternal.TraceInformation("Use Name=" + appName.Value);
             TraceInternal.TraceInformation("Use Path=" + appPath.Value);
@@ -312,13 +311,13 @@ namespace DXFConsole
 
             SHPDocument shp = new SHPDocument();
 
-            // Need to itterate through the DXFDocument
+            // Need to iterate through the DXF Document
 
-            foreach (DXFEntity entity in _dxf.Entities)
+            foreach (Entity entity in _dxf.Entities)
             {
-                if (entity.GetType() == typeof(DXFLine))
+                if (entity.GetType() == typeof(Line))
                 {
-                    DXFLine line = (DXFLine)entity;
+                    Line line = (Line)entity;
                     SHPPoint p1 = shp.GetPoint((double)line.Start.X, (double)line.Start.Y, 0);
                     SHPPoint p2 = shp.GetPoint((double)line.End.X, (double)line.End.Y, 0);
                     SHPLine l1 = new SHPLine(p1, p2);

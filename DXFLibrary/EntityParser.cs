@@ -9,11 +9,11 @@ namespace DXFLibrary
     class EntityParser : ISectionParser
     {
         private Dictionary<string, Type> Entities = new Dictionary<string, Type>();
-        private DXFEntity currentEntity = null;
-        private Stack<DXFEntity> stack = new Stack<DXFEntity>();
+        private Entity currentEntity = null;
+        private Stack<Entity> stack = new Stack<Entity>();
         #region ISectionParser Member
 
-        public void ParseGroupCode(DXFDocument doc, int groupcode, string value)
+        public void ParseGroupCode(Document doc, int groupcode, string value)
         {
             if (Entities.Count == 0)
             {
@@ -46,7 +46,7 @@ namespace DXFLibrary
                     {
                         stack.Push(currentEntity);
                     }
-                    currentEntity = Activator.CreateInstance(Entities[value]) as DXFEntity;
+                    currentEntity = Activator.CreateInstance(Entities[value]) as Entity;
                     if (stack.Count>0 && stack.Peek().HasChildren)
                     {
                         stack.Peek().Children.Add(currentEntity);

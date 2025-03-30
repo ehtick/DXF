@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SLtW66ho84+vKmSelGjdy2xBoajqEefACqP/0cSHV7ml6Z0TCZEVuhGHQqhUlwsoRZNBHU1bQmDb7qc7CnlvRw==",
+  "dgSpecHash": "KdH4726gmgE=",
   "success": true,
   "projectFilePath": "C:\\SOURCE\\GIT\\cs.net\\DXF\\DXFConsole\\DXFConsole.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\jemgr\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
-    "C:\\Users\\jemgr\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
-    "C:\\Users\\jemgr\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\jemgr\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

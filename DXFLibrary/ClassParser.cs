@@ -7,15 +7,15 @@ namespace DXFLibrary
 {
     class ClassParser:ISectionParser
     {
-        private DXFClass currentClass;
+        private Class currentClass;
         #region ISectionParser Member
 
-        public void ParseGroupCode(DXFDocument doc, int groupcode, string value)
+        public void ParseGroupCode(Document doc, int groupcode, string value)
         {
             switch (groupcode)
             {
                 case 0:
-                    currentClass = new DXFClass();
+                    currentClass = new Class();
                     doc.Classes.Add(currentClass);
                     break;
                 case 1:
@@ -28,7 +28,7 @@ namespace DXFLibrary
                     currentClass.AppName = value;
                     break;
                 case 90:
-                    currentClass.ClassProxyCapabilities = (DXFClass.Caps)Enum.Parse(typeof(DXFClass.Caps), value);
+                    currentClass.ClassProxyCapabilities = (Class.Caps)Enum.Parse(typeof(Class.Caps), value);
                     break;
                 case 280:
                     if (int.Parse(value) != 0)

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DXFLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51c87b14f6a04a9e8cb015d9fca0ae83cadfdb67")]
 [assembly: System.Reflection.AssemblyProductAttribute("DXFLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DXFLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -15,7 +15,7 @@ namespace DXFLibrary
         private bool waitingtableheader = false;
         private bool ignoretable = false;
         private bool firstrecordfound = false;
-        public void ParseGroupCode(DXFDocument doc, int groupcode, string value)
+        public void ParseGroupCode(Document doc, int groupcode, string value)
         {
             if (tablehandlers.Count == 0)
             {
@@ -80,7 +80,7 @@ namespace DXFLibrary
         #endregion
     }
 
-    public class DXFRecord
+    public class Record
     {
         public string Handle { get; set; }
         public string DimStyleHandle { get; set; }
@@ -93,12 +93,12 @@ namespace DXFLibrary
 
     abstract class DXFRecordParser : ISectionParser
     {
-        protected abstract DXFRecord currentRecord { get; }
+        protected abstract Record currentRecord { get; }
 
-        protected abstract void createRecord(DXFDocument doc);
+        protected abstract void createRecord(Document doc);
         #region ISectionParser Member
 
-        public virtual void ParseGroupCode(DXFDocument doc, int groupcode, string value)
+        public virtual void ParseGroupCode(Document doc, int groupcode, string value)
         {
             switch (groupcode)
             {

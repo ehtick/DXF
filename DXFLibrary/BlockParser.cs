@@ -9,12 +9,12 @@ namespace DXFLibrary
     {
         #region ISectionParser Member
 
-        private DXFBlock current = null;
+        private Block current = null;
         private bool parsingBlock = false;
         private EntityParser parser = new EntityParser();
-        private DXFDocument container;
+        private Document container;
         public static List<string> groups = new List<string>();
-        public void ParseGroupCode(DXFDocument doc, int groupcode, string value)
+        public void ParseGroupCode(Document doc, int groupcode, string value)
         {
             if (groupcode == 0)
             {
@@ -27,8 +27,8 @@ namespace DXFLibrary
             {
                 if (groupcode == 0 && value == "BLOCK")
                 {
-                    current = new DXFBlock();
-                    container = new DXFDocument();
+                    current = new Block();
+                    container = new Document();
                     parsingBlock = true;
                 }
             }

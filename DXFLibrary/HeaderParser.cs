@@ -12,7 +12,7 @@ namespace DXFLibrary
         #region ISectionParser Member
 
         PropertyInfo currentVar = null;
-        public void ParseGroupCode(DXFDocument doc, int groupcode, string value)
+        public void ParseGroupCode(Document doc, int groupcode, string value)
         {
             if (fields.Count == 0)
             {
@@ -91,12 +91,12 @@ namespace DXFLibrary
                         currentVar.SetValue(doc.Header, parsed, null);
                     }
                 }
-                else if (currentVar.PropertyType.Equals(typeof(DXFPoint)))
+                else if (currentVar.PropertyType.Equals(typeof(Point)))
                 {
-                    DXFPoint p = (DXFPoint)currentVar.GetValue(doc.Header, null);
+                    Point p = (Point)currentVar.GetValue(doc.Header, null);
                     if (p == null)
                     {
-                        p = new DXFPoint();
+                        p = new Point();
                         currentVar.SetValue(doc.Header, p, null);
                     }
                     switch (groupcode)

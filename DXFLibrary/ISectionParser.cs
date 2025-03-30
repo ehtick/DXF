@@ -7,6 +7,6 @@ namespace DXFLibrary
 {
     interface ISectionParser
     {
-        void ParseGroupCode(DXFDocument doc, int groupcode, string value);
+        void ParseGroupCode(Document doc, int groupcode, string value);
     }
 }
