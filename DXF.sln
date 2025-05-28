@@ -27,6 +27,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcoreapp3.1", "netcoreapp
 		ThirdParty\Shape\netcoreapp3.1\ShapeLibrary.dll = ThirdParty\Shape\netcoreapp3.1\ShapeLibrary.dll
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net6.0", "net6.0", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\Tracer\net6.0\TracerLibrary.deps.json = ThirdParty\Tracer\net6.0\TracerLibrary.deps.json
+		ThirdParty\Tracer\net6.0\TracerLibrary.dll = ThirdParty\Tracer\net6.0\TracerLibrary.dll
+		ThirdParty\Tracer\net6.0\TracerLibrary.pdb = ThirdParty\Tracer\net6.0\TracerLibrary.pdb
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "net6.0", "net6.0", "{1E9999BD-4678-437B-B988-0E5DEEB6E141}"
+	ProjectSection(SolutionItems) = preProject
+		ThirdParty\Shape\net6.0\ShapeLibrary.deps.json = ThirdParty\Shape\net6.0\ShapeLibrary.deps.json
+		ThirdParty\Shape\net6.0\ShapeLibrary.dll = ThirdParty\Shape\net6.0\ShapeLibrary.dll
+		ThirdParty\Shape\net6.0\ShapeLibrary.pdb = ThirdParty\Shape\net6.0\ShapeLibrary.pdb
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +68,8 @@ Global
 		{0C8AFFEA-F75D-41A7-B79A-4D612F07645E} = {214AE35A-21AC-40AA-BAA4-D160D2A5B8F3}
 		{038E2210-10E1-4132-9AF8-91A085BEB434} = {97047BE1-9351-47AE-897A-7924E2619B83}
 		{07FFDE2B-8382-47C6-9F38-26CCF0E01C0A} = {038E2210-10E1-4132-9AF8-91A085BEB434}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {214AE35A-21AC-40AA-BAA4-D160D2A5B8F3}
+		{1E9999BD-4678-437B-B988-0E5DEEB6E141} = {038E2210-10E1-4132-9AF8-91A085BEB434}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9BF0F8F-1807-4FA0-9550-6F2B89262FA6}

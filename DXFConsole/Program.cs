@@ -12,7 +12,7 @@ namespace DXFConsole
     {
         #region Fields
 
-        static Document _dxf;
+        static DXFLibrary.Document _dxf;
         public static bool isclosing = false;
         static private HandlerRoutine ctrlCHandler;
 
@@ -94,7 +94,6 @@ namespace DXFConsole
                 logPath.Source = IParameter.SourceType.App;
             }
 
-
             Parameter<SourceLevels> traceLevels = new Parameter<SourceLevels>("traceLevels",TraceInternal.TraceLookup("CRITICAL"));
             traceLevels.Source = IParameter.SourceType.App;
 
@@ -120,7 +119,7 @@ namespace DXFConsole
 
             // Read in configuration
 
-            _dxf = new Document();
+            _dxf = new DXFLibrary.Document();
 
             // Read in the plot specific parameters
 
@@ -309,18 +308,18 @@ namespace DXFConsole
 
             // Create the SHP file
 
-            SHPDocument shp = new SHPDocument();
+            ShapeLibrary.Document shp = new ShapeLibrary.Document();
 
             // Need to iterate through the DXF Document
 
             foreach (Entity entity in _dxf.Entities)
             {
-                if (entity.GetType() == typeof(Line))
+                if (entity.GetType() == typeof(DXFLibrary.Line))
                 {
-                    Line line = (Line)entity;
-                    SHPPoint p1 = shp.GetPoint((double)line.Start.X, (double)line.Start.Y, 0);
-                    SHPPoint p2 = shp.GetPoint((double)line.End.X, (double)line.End.Y, 0);
-                    SHPLine l1 = new SHPLine(p1, p2);
+                    DXFLibrary.Line line = (DXFLibrary.Line)entity;
+                    ShapeLibrary.Point p1 = shp.GetPoint((double)line.Start.X, (double)line.Start.Y, 0);
+                    ShapeLibrary.Point p2 = shp.GetPoint((double)line.End.X, (double)line.End.Y, 0);
+                    ShapeLibrary.Line l1 = new ShapeLibrary.Line(p1, p2);
                     shp.AddLine(l1);
                 }
             }

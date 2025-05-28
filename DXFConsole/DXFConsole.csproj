@@ -9,10 +9,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ShapeLibrary">
-      <HintPath>..\ThirdParty\Shape\netcoreapp3.1\ShapeLibrary.dll</HintPath>
+      <HintPath>..\ThirdParty\Shape\net6.0\ShapeLibrary.dll</HintPath>
     </Reference>
     <Reference Include="TracerLibrary">
-      <HintPath>..\ThirdParty\Tracer\netcoreapp3.1\TracerLibrary.dll</HintPath>
+      <HintPath>..\ThirdParty\Tracer\net6.0\TracerLibrary.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
